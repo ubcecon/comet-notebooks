@@ -1,6 +1,9 @@
 ---
-title: '3.3 - Advanced - Classification and Clustering'
+title: '4.1 - Advanced - Classification and Clustering'
 categories: [advanced, R, k-means clustering, elbow plot, stargazer]
+authors:  COMET Team <br> _Colby Chambers, Jonathan Graves_
+date: 2022-10-18
+description: This notebook introduces the classification and clustering models, especially for economic and sociological datasets.
 format: 
   html: default
   ipynb:
@@ -10,9 +13,6 @@ format:
         language: r
         name: ir
 ---
-
-* **Authors**: COMET Team (Colby Chambers, Jonathan Graves)
-* **Last Update**: 18 October 2022 
 
 ### Prerequisites
 
@@ -25,8 +25,8 @@ format:
 
 After completing this notebook, you will be able to:
 
-* Understand clustering and its purpose through the common method of K-means clustering.
-* Apply K-means clustering to predict rates of recidivism.
+* Understand clustering and its purpose through the common method of $K$-means clustering.
+* Apply $K$-means clustering to predict rates of recidivism.
 
 ### References
 
@@ -35,7 +35,6 @@ After completing this notebook, you will be able to:
 * StatQuest: K-means clustering. https://www.youtube.com/watch?v=4b5d3muPQmA&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=40
 * Cluster-then-predict for classification tasks. https://towardsdatascience.com/cluster-then-predict-for-classification-tasks-142fdfdc87d6
 * Ideal Choice for K. https://www.guru99.com/r-k-means-clustering.html
-
 
 ## Introduction 
 
@@ -308,14 +307,11 @@ What is this algorithm picking up?  It's likely a complex combination of a coupl
   
 In other words, the system is likely picking up **existing cultural** relationships, rather than any true causal relationship.   This may be why Propublica found:
 
->[S]ignificant racial disparities ... in forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.
->
-> * The formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.
-> * White defendants were mislabeled as low risk more often than black defendants.
+* [S]ignificant racial disparities ... in forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.
+* The formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.
+* White defendants were mislabeled as low risk more often than black defendants.
 
 This is called **algorithmic bias**: the algorithm is innately biased against black defendants.  You will notice this is _despite the fact_ that race was never used in the construction of the clusters. The bias notably arises from the relationship race has with _other factors_ in the model.
-
-
 
 Moreover, it's highly dependent on the algorithm used. Let's try a different model (called _linear probability_):
 

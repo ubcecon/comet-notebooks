@@ -1,7 +1,8 @@
 ---
-title: Advanced - LLM APIs 2
+title: 4.5 - Advanced - LLM APIs 2
 author: 'COMET Team <br> _Jonathan Graves, Alex Haddon_'
 date: 7 August 2024
+description: This notebook illustrates how to call different Large Language Models (LLMs) using their API, for the purposes of data analysis or computational use.
 categories:
   - advanced
   - python
@@ -14,10 +15,9 @@ format:
         display_name: Python 3 (ipykernel)
         language: python3
         name: python3
-jupyter: python3
 ---
-
 ## What are LLMs?
+
 Large Language Models (LLMs) are advanced machine learning models designed to understand and generate human-like text based on the data they have been trained on. Examples of popular LLMs include GPT-3.5 from OpenAI and open-source models such as `ollama` or `huggingface`.
 
 ## Applications of LLMs
@@ -79,7 +79,7 @@ HINT: *In your prompt specify that you don't want a long response. Without that,
 Here are a few questions you can use to check your understanding. Run the cell below before attempting the multiple choice questions.
 
 ```{python}
-from v2_tests import Tests
+from advanced_llm_apis2_tests.py import Tests
 ```
 
 ### Question 1
